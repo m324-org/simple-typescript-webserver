@@ -22,7 +22,6 @@ RUN npm install -g typescript
 # Compile TypeScript to JavaScript
 RUN yarn build
 
-#hi
 
 # Expose the port your app runs on (modify if different)
 EXPOSE 3000
