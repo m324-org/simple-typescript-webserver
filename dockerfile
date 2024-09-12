@@ -1,17 +1,14 @@
 # Use Node.js 20.9.0 base image
 FROM node:20.9.0-alpine
 
-# Install dependencies for yarn on alpine
+# Install additional dependencies for alpine
 RUN apk add --no-cache bash curl git
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json (or yarn.lock) if present
+# Copy package.json and yarn.lock (or package-lock.json) if present
 COPY package*.json ./
-
-# Install Yarn globally
-RUN npm install -g yarn
 
 # Install dependencies (including dev dependencies for TypeScript compilation)
 RUN yarn install
@@ -19,7 +16,7 @@ RUN yarn install
 # Copy the rest of your application code
 COPY . .
 
-# Install TypeScript globally
+# Install TypeScript globally (if not included in your dev dependencies)
 RUN npm install -g typescript
 
 # Compile TypeScript to JavaScript
