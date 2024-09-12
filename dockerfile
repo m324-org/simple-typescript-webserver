@@ -22,8 +22,6 @@ RUN npm install -g typescript
 # Compile TypeScript to JavaScript
 RUN yarn build
 
-# Remove dev dependencies (optional if they shouldn't be in the final image)
-RUN yarn prune --production
 
 # Expose the port your app runs on (modify if different)
 EXPOSE 3000
