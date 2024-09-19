@@ -46,13 +46,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: type-test-service
-  namespace: m324-csbe1
+  name: type-test # Change this to your app name
+  namespace: m324-csbe1 # Ask the teacher for the namespace name
 spec:
-  selector:
-    app: type-test
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: http
-  type: LoadBalancer
+      protocol: TCP
+  selector:
+    app: type-test # Change this to your app name
