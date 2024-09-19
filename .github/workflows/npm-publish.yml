@@ -16,12 +16,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-#e
+      #e
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20.9.0"
-          
+
       - name: Install Yarn
         run: npm install -g yarn
 
@@ -55,6 +55,9 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: kubectl apply -f .k8s/deployment.yaml
+
+      - name: Deploy Ingress
+        run: kubectl apply -f .k8s/ingress.yaml
 
       - name: Verify Deployment
         run: kubectl rollout status deployment/type-test-deployment
