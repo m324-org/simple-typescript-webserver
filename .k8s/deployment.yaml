@@ -24,7 +24,7 @@ spec:
             - "-c"
             - yarn start
           ports:
-            - containerPort: 3000
+            - containerPort: 3000 # Ensure this matches your app's exposed port
           env:
             - name: NODE_ENV
               value: "production"
