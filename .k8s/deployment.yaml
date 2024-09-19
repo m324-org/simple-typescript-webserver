@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: ${KUBERNETES_NAMESPACE}
+  namespace: m324-csbe1
   name: type-test-deployment
   labels:
     app: type-test
