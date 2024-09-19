@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hablopablo # Change this to your app name
-  namespace: m324-csbe1 # Ask the teacher for the namespace name
+  name: hablopablo
+  namespace: m324-csbe1
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     acme.cert-manager.io/http01-edit-in-place: "true"
@@ -12,16 +12,16 @@ metadata:
 spec:
   tls:
     - hosts:
-        - hulu.m324.hackerman.ch # Change this to your base url exsample: my-subdomain.m324.hackerman.ch
-      secretName: hulu.m324.hackerman.ch-tls # Change this to your base url example: my-subdomain.m324.hackerman.ch-tls
+        - hulu.m324.hackerman.ch
+      secretName: hulu.m324.hackerman.ch-tls
   rules:
-    - host: hulu.m324.hackerman.ch # Change this to your base url example: my-subdomain.m324.hackerman.ch
+    - host: hulu.m324.hackerman.ch
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: type-test # Change this to your app name
+                name: type-test
                 port:
-                  number: 80
+                  number: 3000 # Adjust the port to match your container port

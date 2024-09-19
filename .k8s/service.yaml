@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: type-test # Change this to your app name
-  namespace: m324-csbe1 # Ask the teacher for the namespace name
+  name: type-test
+  namespace: m324-csbe1
 spec:
   ports:
     - port: 80
-      targetPort: http
+      targetPort: 3000 # Adjust to 3000 to match your container's port
       protocol: TCP
   selector:
-    app: type-test # Change this to your app name
+    app: type-test
