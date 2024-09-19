@@ -60,5 +60,8 @@ jobs:
       - name: Deploy Ingress
         run: kubectl apply -f .k8s/ingress.yaml
 
+      - name: Deploy Service
+        run: kubectl apply -f .k8s/service.yaml
+
       - name: Verify Deployment
         run: kubectl rollout status deployment/type-test-deployment
