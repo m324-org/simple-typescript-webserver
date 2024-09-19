@@ -12,7 +12,7 @@ metadata:
 spec:
   tls:
     - hosts:
-        - hulu.m324.hackerman.ch # Change this to your base url example: my-subdomain.m324.hackerman.ch
+        - hulu.m324.hackerman.ch # Change this to your base url exsample: my-subdomain.m324.hackerman.ch
       secretName: hulu.m324.hackerman.ch-tls # Change this to your base url example: my-subdomain.m324.hackerman.ch-tls
   rules:
     - host: hulu.m324.hackerman.ch # Change this to your base url example: my-subdomain.m324.hackerman.ch
