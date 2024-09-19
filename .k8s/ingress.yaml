@@ -22,6 +22,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hablopablo # Change this to your app name
+                name: type-test # Change this to your app name
                 port:
                   number: 80
