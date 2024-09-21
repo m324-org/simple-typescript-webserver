@@ -10,9 +10,10 @@ on:
 jobs:
   build:
     if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'master' && github.event.pull_request.head.ref == 'development'
+    #runs-on:
+      #group: default
     runs-on:
-      group: default
-
+      group: ubuntu-24.04	
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
