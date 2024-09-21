@@ -6,7 +6,7 @@ metadata:
 spec:
   ports:
     - port: 80
-      targetPort: 3000 # Adjust to 3000 to match your container's port
+      targetPort: 3000 # Adjust to 3000 to match your container's port please
       protocol: TCP
   selector:
     app: type-test
